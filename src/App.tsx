@@ -6,7 +6,7 @@ const App: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
 
   useEffect(() => {
-    window.api.getNotes().then((loadedNotes: Note[]) => {
+    window.api?.getNotes().then((loadedNotes: Note[]) => {
       setNotes(loadedNotes);
     });
   }, []);

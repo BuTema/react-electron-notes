@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# Electron Notes App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple desktop note-taking application built with Electron, React, and TypeScript. Users can create, edit, delete, and save notes, which are stored locally in a JSON file. The application also uses Tailwind CSS for styling and Vitest for unit testing.
+
+## Features
+
+Create, edit, and delete notes with a simple interface
+Persistent storage: Notes are stored in a local JSON file for persistence
+Rich text editing using TipTap
+Modern styling with Tailwind CSS
+TypeScript support for type safety and maintainability
+Technologies Used
+
+- Electron for the desktop application framework
+- React as the UI library
+- TypeScript for type safety
+- Tailwind CSS for styling
+- TipTap as the rich text editor
+- Vitest and React Testing Library for unit testing
+
+## Getting Started
+
+Ensure you have Node.js and npm installed on your machine. You can download them from nodejs.org.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/BuTema/react-electron-notes.git
+cd react-electron-notes
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Build Process
+
+Note: You need to build the React application before running Electron.
+
+Build the React app:
+
+```bash
+npm run build
+```
+
+This command uses Webpack to compile the React code and outputs the bundled file to the dist/ folder.
+
+Start the Electron app:
+
+```bash
+npm run start
+```
+
+This command launches the Electron application, loading the compiled React app.
+
+## Usage
+
+Add a Note: Click on "Create New Note" to add a new note.
+Edit a Note: Enter text in the title and content area.
+Delete a Note: Click the "Delete Note" button to remove a note permanently.
+Notes are saved automatically, and data is stored in a notes.json file in Electron’s userData directory, ensuring persistence across sessions.
 
 ## Available Scripts
 
-In the project directory, you can run:
+Build the React app using Webpack.
 
-### `npm start`
+```bash
+npm run build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Start the Electron app (ensure you’ve built React first).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm run start
+```
 
-### `npm test`
+Run unit tests with Vitest and React Testing Library.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run test
+```
 
-### `npm run build`
+## Testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This app uses Vitest for testing the general logic and React Testing Library for testing UI components. Run tests with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run test
+```
